@@ -1,5 +1,5 @@
 {
-    "name": "AppLinko/flarum-daily-check-in",
+    "name": "shentx/flarum-daily-check-in",
     "description": "一个 Flarum 拓展. 在 Ziiven/flarum-daily-check-in 签到基础上增加了随机积分功能.",
     "type": "flarum-extension",
     "license": "MIT",
