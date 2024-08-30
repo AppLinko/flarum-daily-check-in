@@ -1,30 +1,30 @@
 {
-    "name": "ziiven/flarum-daily-check-in",
-    "description": "A Flarum extension. Add a button in the index page that allow user to daily check in the forum and receive reward.",
+    "name": "AppLinko/flarum-daily-check-in",
+    "description": "一个 Flarum 拓展. 在 Ziiven/flarum-daily-check-in 签到基础上增加了随机积分功能.",
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
         "flarum/core": "^1.0"
     },
     "support": {
-        "issues": "https://github.com/Ziiven/flarum-daily-check-in/issues",
-        "source": "https://github.com/Ziiven/flarum-daily-check-in"
+        "issues": "https://github.com/AppLinko/flarum-daily-check-in/issues",
+        "source": "https://github.com/AppLinko/flarum-daily-check-in"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Ziven\\checkin\\": "src/"
+            "AppLinko\\checkin\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Ziven"
+            "name": "AppLinko"
         }
     ],
     "extra": {
         "flarum-extension": {
-            "title": "Ziven Daily Check In",
+            "title": "Daily Check In",
             "icon": {
                 "name": "fas fa-calendar-check",
                 "backgroundColor": "#238c59",
