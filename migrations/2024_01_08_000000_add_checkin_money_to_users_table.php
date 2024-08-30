@@ -3,5 +3,5 @@
 use Flarum\Database\Migration;
 
 return Migration::addColumns('users', [
-    'last_checkin_time' => ['datetime', 'nullable' => true]
+    'last_checkin_money' => ['integer','default' => 0],
 ]);

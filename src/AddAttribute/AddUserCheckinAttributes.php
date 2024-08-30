@@ -23,6 +23,7 @@ class AddUserCheckinAttributes
         $last_checkin_time = $user->last_checkin_time;
         $attributes = [];
         $attributes['lastCheckinTime'] = $user->last_checkin_time;
+        $attributes['lastCheckinMoney'] = $user->last_checkin_money;
         $attributes['totalContinuousCheckIn'] = $user->total_continuous_checkin_count;
         $attributes['checkInCompatibleExtensions'] = [];
 

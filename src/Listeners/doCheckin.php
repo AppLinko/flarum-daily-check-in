@@ -48,6 +48,7 @@ class doCheckin{
                     }
 
                     $user->last_checkin_time = date('Y-m-d H:i:s', $current_timestamp);
+
                     $user->total_checkin_count+=1;
 
                     // app("log")->error($canCheckin);
@@ -55,7 +56,9 @@ class doCheckin{
 
                     if(isset($user->money)===true){
                         $checkinRewardMoney = (float)$this->settings->get('ziven-forum-checkin.checkinRewardMoney', 0);
-                        $user->money+=$checkinRewardMoney;
+                        $randomAmount = random_int(1, $checkinRewardMoney);
+                        $user->last_checkin_money = $randomAmount;
+                        $user->money += $randomAmount;
                     }
 
                     $this->events->dispatch(new checkinUpdated($user));
