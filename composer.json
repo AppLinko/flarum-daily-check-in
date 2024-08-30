@@ -10,7 +10,7 @@
         "issues": "https://github.com/AppLinko/flarum-daily-check-in/issues",
         "source": "https://github.com/AppLinko/flarum-daily-check-in"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
