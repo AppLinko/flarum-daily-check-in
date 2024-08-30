@@ -38,7 +38,7 @@ class AddUserCheckinAttributes
             }
         }
 
-        $timezone = intval($this->settings->get('ziven-forum-checkin.checkinTimeZone', 0));
+        $timezone = intval($this->settings->get('shentx-forum-checkin.checkinTimeZone', 0));
         $time = time()+$timezone*60*60;
 
         $lastCheckinTimeTimestamp = $last_checkin_time===null?0:strtotime($last_checkin_time);

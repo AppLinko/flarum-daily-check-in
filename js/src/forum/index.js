@@ -5,7 +5,7 @@ import Alert from 'flarum/common/components/Alert';
 import checkInSuccessModal from './components/checkInSuccessModal';
 import checkInFailedModal from './components/checkInFailedModal';
 
-app.initializers.add('ziven-checkin', () => {
+app.initializers.add('shentx-checkin', () => {
   extend(IndexPage.prototype, 'sidebarItems', function(items) {
     if(app.session.user!==null && app.forum.attribute('allowCheckIn')===true){
       const routeName = app.current.get('routeName');
@@ -27,7 +27,7 @@ app.initializers.add('ziven-checkin', () => {
       }
 
       if(canCheckin===true){
-        checkinButtonText = app.translator.trans('ziven-checkin.forum.check-in');
+        checkinButtonText = app.translator.trans('shentx-checkin.forum.check-in');
         items.add(itemName, Button.component({
           icon: 'fas fa-calendar',
           className: 'Button CheckInButton--yellow',
@@ -61,7 +61,7 @@ app.initializers.add('ziven-checkin', () => {
                       const successRewardTextAlertKey = app.alerts.show(Alert, { type: 'success' }, checkInSuccessRewardText);
                     }
                   }else{
-                    const failedTextAlertKey = app.alerts.show(Alert, { type: 'error' }, app.translator.trans('ziven-checkin.forum.check-in-failed')+" "+app.translator.trans('ziven-checkin.forum.try-again-later'));
+                    const failedTextAlertKey = app.alerts.show(Alert, { type: 'error' }, app.translator.trans('shentx-checkin.forum.check-in-failed')+" "+app.translator.trans('shentx-checkin.forum.try-again-later'));
                   }
                 }else if(forumCheckinSuccessPromptType===2){
                   if(canCheckinRecheck===false){
@@ -84,7 +84,7 @@ app.initializers.add('ziven-checkin', () => {
           },forumAutoCheckInDelay);
         }
       }else{
-        checkinButtonText = totalContinuousCheckIn<=1?app.translator.trans('ziven-checkin.forum.checked-in-day', {count: totalContinuousCheckIn}):app.translator.trans('ziven-checkin.forum.checked-in-days', {count: totalContinuousCheckIn});
+        checkinButtonText = totalContinuousCheckIn<=1?app.translator.trans('shentx-checkin.forum.checked-in-day', {count: totalContinuousCheckIn}):app.translator.trans('shentx-checkin.forum.checked-in-days', {count: totalContinuousCheckIn});
         items.add(itemName, Button.component({
           icon: 'fas fa-calendar-check',
           className: 'Button CheckInButton--green',

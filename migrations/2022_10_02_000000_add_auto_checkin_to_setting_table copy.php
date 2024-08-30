@@ -3,6 +3,6 @@
 use Flarum\Database\Migration;
 
 return Migration::addSettings([
-    'ziven-forum-checkin.autoCheckIn' => 0,
-    'ziven-forum-checkin.autoCheckInDelay' => 0
+    'shentx-forum-checkin.autoCheckIn' => 0,
+    'shentx-forum-checkin.autoCheckInDelay' => 0
 ]);

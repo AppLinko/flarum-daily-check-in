@@ -19,15 +19,15 @@ $extend = [
     (new Extend\Event())->listen(Saving::class, [doCheckin::class, 'checkinSaved']),
     (new Extend\ApiSerializer(UserSerializer::class))->attributes(AddUserCheckinAttributes::class),
     (new Extend\Settings())
-        ->serializeToForum('forumCheckinRewarMoney', 'ziven-forum-checkin.checkinRewardMoney',function ($raw) {
+        ->serializeToForum('forumCheckinRewarMoney', 'shentx-forum-checkin.checkinRewardMoney',function ($raw) {
             return (float)$raw;
         })
-        ->serializeToForum('forumAutoCheckin', 'ziven-forum-checkin.autoCheckIn', 'intval', 0)
-        ->serializeToForum('forumAutoCheckinDelay', 'ziven-forum-checkin.autoCheckInDelay', 'intval', 0)
-        ->serializeToForum('forumCheckinTimeZone', 'ziven-forum-checkin.checkinTimeZone', 'intval', 0)
-        ->serializeToForum('forumCheckinSuccessPromptType', 'ziven-forum-checkin.checkinSuccessPromptType', 'intval', 0)
-        ->serializeToForum('forumCheckinSuccessPromptText', 'ziven-forum-checkin.checkinSuccessPromptText', 'strval')
-        ->serializeToForum('forumCheckinSuccessPromptRewardText', 'ziven-forum-checkin.checkinSuccessPromptRewardText', 'strval'),
+        ->serializeToForum('forumAutoCheckin', 'shentx-forum-checkin.autoCheckIn', 'intval', 0)
+        ->serializeToForum('forumAutoCheckinDelay', 'shentx-forum-checkin.autoCheckInDelay', 'intval', 0)
+        ->serializeToForum('forumCheckinTimeZone', 'shentx-forum-checkin.checkinTimeZone', 'intval', 0)
+        ->serializeToForum('forumCheckinSuccessPromptType', 'shentx-forum-checkin.checkinSuccessPromptType', 'intval', 0)
+        ->serializeToForum('forumCheckinSuccessPromptText', 'shentx-forum-checkin.checkinSuccessPromptText', 'strval')
+        ->serializeToForum('forumCheckinSuccessPromptRewardText', 'shentx-forum-checkin.checkinSuccessPromptRewardText', 'strval'),
 
     (new Extend\ApiSerializer(ForumSerializer::class))
         ->attribute('allowCheckIn', function (ForumSerializer $serializer) {

@@ -12,7 +12,7 @@ export default class checkInResultModal extends Modal {
   }
 
   title() {
-    return (<div className="checkInResultModal successTitleText">{app.translator.trans('ziven-checkin.forum.check-in-success')}</div>);
+    return (<div className="checkInResultModal successTitleText">{app.translator.trans('shentx-checkin.forum.check-in-success')}</div>);
   }
 
   content() {

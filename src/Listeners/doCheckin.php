@@ -28,7 +28,7 @@ class doCheckin{
 
             if (array_key_exists('canCheckin', $attributes)) {
                 $canCheckin = true;
-                $timezone = intval($this->settings->get('ziven-forum-checkin.checkinTimeZone', 0));
+                $timezone = intval($this->settings->get('shentx-forum-checkin.checkinTimeZone', 0));
                 $current_timestamp = time()+$timezone*60*60;
                 $current_data_at_midnight = strtotime(date('Y-m-d', $current_timestamp)." 00:00:00");
                 
@@ -55,7 +55,7 @@ class doCheckin{
                     // app("log")->error($user->total_continuous_checkin_count);
 
                     if(isset($user->money)===true){
-                        $checkinRewardMoney = (float)$this->settings->get('ziven-forum-checkin.checkinRewardMoney', 0);
+                        $checkinRewardMoney = (float)$this->settings->get('shentx-forum-checkin.checkinRewardMoney', 0);
                         $randomAmount = random_int(1, $checkinRewardMoney);
                         $user->last_checkin_money = $randomAmount;
                         $user->money += $randomAmount;
