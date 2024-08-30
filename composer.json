@@ -14,7 +14,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "AppLinko\\checkin\\": "src/"
+            "Shentx\\checkin\\": "src/"
         }
     },
     "authors": [
